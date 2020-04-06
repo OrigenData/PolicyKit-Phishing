@@ -1,0 +1,33 @@
+
+
+plugins {
+
+    id 'java-library'
+    id 'eclipse'
+    id 'application'
+}
+
+dependencies {
+	
+	// java-gnome
+	compile files('/usr/lib64/java-gnome/gtk.jar')
+	
+}
+
+java {
+
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+repositories {
+
+    jcenter()
+}
+
+
+application {
+	mainClassName = "org.policykit.phishing.Main"
+    applicationName = 'policykit-phishing'
+
+}
